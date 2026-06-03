@@ -54,6 +54,38 @@ body{background:#0d120d;padding:0}
 .idle-pos{color:#e85252}
 .avg-row td{border-top:1px solid #243024;color:#4cda7c;font-weight:500}
 .mini-bar{display:inline-block;height:3px;border-radius:2px;vertical-align:middle;margin-left:4px}
+
+/* --- NOVAS REGRAS ADICIONADAS --- */
+/* Transição suave para a barra de eficiência e textos de porcentagem */
+.eff-bar .eff-work, 
+.eff-bar .eff-idle,
+.profile .pstat div span {
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o cartão de status do perfil */
+.pstat:hover .eff-work {
+  background-color: #5fff93; /* Verde mais vivo */
+  box-shadow: 0 0 8px rgba(76, 218, 124, 0.6); /* Brilho neon */
+}
+
+.pstat:hover .eff-idle {
+  background-color: #ff6666; /* Vermelho mais vivo */
+  box-shadow: 0 0 8px rgba(232, 82, 82, 0.6); /* Brilho neon */
+}
+
+/* Destaca também os textos das porcentagens inferiores durante o hover */
+.pstat:hover div span[style*="color:#4cda7c"] {
+  color: #5fff93 !important;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(76, 218, 124, 0.4);
+}
+
+.pstat:hover div span[style*="color:#e85252"] {
+  color: #ff6666 !important;
+  font-weight: bold;
+  text-shadow: 0 0 4px rgba(232, 82, 82, 0.4);
+}
 </style>
 </head>
 <body>
