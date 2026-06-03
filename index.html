@@ -60,10 +60,15 @@ body{background:#0d120d;padding:0}
 .eff-bar .eff-work, 
 .eff-bar .eff-idle,
 .profile .pstat div span {
-  transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre o cartão de status do perfil */
+/* Efeito ao passar o mouse sobre o cartão de status do perfil (inclui Zoom e Borda) */
+.pstat:hover {
+  transform: scale(1.02); /* Aplica o leve zoom */
+  border-color: rgba(76, 218, 124, 0.4); /* Destaca levemente a borda do card */
+}
+
 .pstat:hover .eff-work {
   background-color: #5fff93; /* Verde mais vivo */
   box-shadow: 0 0 8px rgba(76, 218, 124, 0.6); /* Brilho neon */
